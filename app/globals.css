@@ -69,12 +69,12 @@ body {
    TYPOGRAPHY
 ========================================= */
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-text-main);
-}
+} */
 
 h1 {
   font-size: var(--h1-size);
