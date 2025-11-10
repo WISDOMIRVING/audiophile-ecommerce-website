@@ -10,7 +10,7 @@ const navlinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#101010] text-white px-6 md:px-10 lg:px-20 py-16 mt-24">
+    <footer className="bg-dark-gray text-white px-6 md:px-10 lg:px-20 py-16 mt-24">
       <div className="max-w-[1110px] mx-auto flex flex-col items-center lg:items-start">
         {/* Top bar accent */}
         <div className="w-[101px] h-1 bg-[#D87D4A] mb-12"></div>
@@ -58,28 +58,13 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex gap-6">
             <Link href="https://facebook.com" target="_blank">
-              <Image
-                src="/patt.svg"
-                alt="Facebook"
-                width={24}
-                height={24}
-              />
+              <Image src="/patt.svg" alt="Facebook" width={24} height={24} />
             </Link>
             <Link href="https://twitter.com" target="_blank">
-              <Image
-                src="/Shape.svg"
-                alt="Twitter"
-                width={24}
-                height={24}
-              />
+              <Image src="/Shape.svg" alt="Twitter" width={24} height={24} />
             </Link>
             <Link href="https://instagram.com" target="_blank">
-              <Image
-                src="/Path.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
+              <Image src="/Path.svg" alt="Instagram" width={24} height={24} />
             </Link>
           </div>
         </div>

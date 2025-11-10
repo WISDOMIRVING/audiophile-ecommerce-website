@@ -15,8 +15,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white relative z-50">
-      <div className="flex justify-between items-center w-full max-w-[1110px] mx-auto p-6">
+    <header className="bg-black text-white relative z-50 p-6">
+      <div className="flex justify-between items-center w-full max-w-[1110px] mx-auto">
         {/* Left side: Hamburger + Logo */}
         <div className="flex items-center gap-6">
           {/* Hamburger (mobile only) */}

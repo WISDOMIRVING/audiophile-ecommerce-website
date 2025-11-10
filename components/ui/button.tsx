@@ -6,25 +6,17 @@ import React from "react";
 
 // Base styles + variants using class-variance-authority (CVA)
 const buttonVariants = cva(
-  "inline-flex items-center justify-center font-bold uppercase tracking-[1px] transition-colors duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed",
+  "inline-flex items-center justify-center uppercase font-semibold cursor-pointer hover:bg-white hover:text-black tracking-[1px] transition-colors duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
-        primary:
-          "bg-orange-500 text-white hover:bg-black",
-        secondary:
-          "border border-black text-black hover:bg-black hover:text-white",
-        dark:
-          "bg-black text-white hover:bg-orange-500",
-        ghost:
-          "text-black hover:text-orange-500",
-        none:
-          "bg-orange-500 text-white",
+        primary: "bg-primary text-white",
+        dark: "bg-black text-white",
         outline:
-          "border border-gray-400 text-white hover:bg-white hover:text-black",
+          "border border-black text-white",
       },
       size: {
-        default: "px-6 py-4 text-[13px]",
+        default: "px-8 py-4 text-[13px]",
         sm: "px-4 py-2 text-[12px]",
         lg: "px-8 py-4 text-[15px]",
       },

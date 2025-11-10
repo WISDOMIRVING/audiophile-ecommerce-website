@@ -1,14 +1,18 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 interface CategoryCardProps {
-  title: string
-  imageSrc: string
-  href: string
+  title: string;
+  imageSrc: string;
+  href: string;
 }
 
-export default function CategoryCard({ title, imageSrc, href }: CategoryCardProps) {
+export default function CategoryCard({
+  title,
+  imageSrc,
+  href,
+}: CategoryCardProps) {
   return (
     <div className="relative flex flex-col items-center bg-neutral-100 rounded-lg py-8">
       <div className="absolute -top-12">
@@ -20,9 +24,9 @@ export default function CategoryCard({ title, imageSrc, href }: CategoryCardProp
           href={href}
           className="mt-3 inline-flex items-center gap-2 text-xs tracking-[1px] text-black/50 hover:text-primary transition"
         >
-          SHOP <ArrowRight size={14} />
+          SHOP <ChevronRight size={14} />
         </Link>
       </div>
     </div>
-  )
+  );
 }

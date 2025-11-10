@@ -1,5 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function FeaturedProduct() {
   return (
@@ -22,19 +23,20 @@ export default function FeaturedProduct() {
         {/* Text + CTA */}
         <div className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left gap-6 px-6 lg:px-0 w-full lg:w-1/2 pb-20">
           <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight text-left">
-           <span className="text-white">ZX9</span><br /> <span className="text-white">SPEAKER</span>
+            <span className="text-white">ZX9</span>
+            <br /> <span className="text-white">SPEAKER</span>
           </h2>
           <p className="text-white/80 max-w-sm lg:text-left">
-            Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
+            Upgrade to premium speakers that are phenomenally built to deliver
+            truly remarkable sound.
           </p>
-          <Button
-            variant="none"
-            className="text-white bg-gray-800 rounded-none px-4 py-2"
-          >
-            SEE PRODUCT
-          </Button>
+          <Link href="/speakers/zx9-speaker">
+            <Button variant="dark" className="text-white">
+              SEE PRODUCT
+            </Button>{" "}
+          </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }
