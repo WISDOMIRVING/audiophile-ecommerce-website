@@ -1,5 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function SecondaryProduct() {
   return (
@@ -13,14 +14,16 @@ export default function SecondaryProduct() {
           <h2 className="text-black text-3xl md:text-4xl font-bold tracking-tight">
             ZX7 SPEAKER
           </h2>
-          <Button
-            variant="outline"
-            className="mt-6 border-black text-black hover:bg-black hover:text-white rounded-none px-8 py-3"
-          >
-            SEE PRODUCT
-          </Button>
+          <Link href="/speakers/zx7-speaker">
+            <Button
+              variant="outline"
+              className="mt-6 border-black text-black hover:bg-black hover:text-white rounded-none px-8 py-3"
+            >
+              SEE PRODUCT
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }

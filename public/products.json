@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1",
+    "name": "ZX9",
+    "slug": "zx9-speaker",
+    "isNew": true,
+    "category": "Speakers",
+    "description": "Upgrade your sound system with the all-new ZX9 speaker. Its stylish design and powerful drivers deliver rich, immersive audio for any room in your home.",
+    "price": 455,
+    "features": [
+      "The ZX9 Speaker features dual 8-inch woofers and a high-fidelity tweeter, providing deep bass and crystal-clear highs.",
+      "Its wireless connectivity and built-in amplifier make it perfect for seamless streaming and powerful performance without compromise."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Speaker Unit" },
+      { "quantity": 1, "item": "User Manual" },
+      { "quantity": 1, "item": "Remote Control" },
+      { "quantity": 1, "item": "Power Cable" }
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1581276879432-15e50529f34b?w=500&h=500&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=400&h=300&fit=crop"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "ZX7",
+    "slug": "zx7-speaker",
+    "isNew": false,
+    "category": "Speakers",
+    "description": "Stream high-quality audio with the ZX7 speaker. Designed for refined acoustics and minimalist style, it brings balanced tones and clarity to any environment.",
+    "price": 455,
+    "features": [
+      "The ZX7 offers exceptional mid-range response and crisp highs, powered by precision-crafted components.",
+      "Its durable wooden enclosure reduces vibration, ensuring a pure, distortion-free sound experience."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Speaker Unit" },
+      { "quantity": 1, "item": "Power Cable" },
+      { "quantity": 1, "item": "User Manual" }
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&h=500&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1555617117-08a7964fbd9f?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1505740106531-4243f3831c3a?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=400&h=300&fit=crop"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "YX1 Wireless",
+    "slug": "yx1-wireless-earphones",
+    "isNew": true,
+    "category": "Earphones",
+    "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+    "price": 599,
+    "features": [
+      "Tailor your listening experience with bespoke dynamic drivers that deliver deep bass, clear mids, and crisp highs.",
+      "Active noise cancellation feature for immersive listening in noisy environments.",
+      "Wireless Bluetooth connectivity with long-lasting battery life.",
+      "Sleek ergonomic design for comfortable all-day wear."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Earphone Unit" },
+      { "quantity": 2, "item": "Ear Tips" },
+      { "quantity": 1, "item": "Charging Cable" },
+      { "quantity": 1, "item": "User Manual" },
+      { "quantity": 1, "item": "Carrying Case" }
+    ],
+    "mainImage": "/my-earpod.png",
+    "galleryImages": [
+      "/yx1-gallery-1.png",
+      "/yx1-gallery-2.png",
+      "/yx1-gallery-3.png"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "XX99 Mark II",
+    "slug": "xx99-mark-ii-headphones",
+    "isNew": true,
+    "category": "Headphones",
+    "description": "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
+    "price": 2999,
+    "features": [
+      "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation.",
+      "The advanced active noise cancellation with high-quality microphones makes these headphones ideal for travel and commuting. With its sleek aluminum frame and RGB lighting accents, the XX99 Mark II exemplifies modern audio engineering and visual design aesthetics."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Headphone Unit" },
+      { "quantity": 2, "item": "Replacement Earcups" },
+      { "quantity": 1, "item": "User Manual" },
+      { "quantity": 1, "item": "3.5mm 5m Audio Cable" },
+      { "quantity": 1, "item": "Travel Bag" }
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400&h=300&fit=crop"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "XX99 Mark I",
+    "slug": "xx99-mark-i-headphones",
+    "isNew": false,
+    "category": "Headphones",
+    "description": "A classic reborn — the XX99 Mark I headphones combine vintage craftsmanship with modern acoustic technology for an iconic listening experience.",
+    "price": 455,
+    "features": [
+      "The XX99 Mark I’s custom drivers deliver a warm, balanced sound signature suited for audiophiles and professionals alike.",
+      "A reinforced aluminum frame ensures durability, while its soft-touch leather pads provide maximum comfort."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Headphone Unit" },
+      { "quantity": 1, "item": "Audio Cable" },
+      { "quantity": 1, "item": "Carrying Pouch" },
+      { "quantity": 1, "item": "User Manual" }
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1580894894513-541e068a03ee?w=500&h=500&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1592878904946-b3cd8ae243d1?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1555617117-08a7964fbd9f?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=300&fit=crop"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "XX59",
+    "slug": "xx59-headphones",
+    "isNew": false,
+    "category": "Headphones",
+    "description": "The XX59 headphones offer an accessible entry into high-fidelity sound. Compact, stylish, and comfortable for everyday use.",
+    "price": 455,
+    "features": [
+      "Enjoy crisp highs and balanced bass in a lightweight frame designed for long listening sessions.",
+      "Perfect for home, work, or travel — the XX59 combines portability and quality without compromise."
+    ],
+    "in_the_box": [
+      { "quantity": 1, "item": "Headphone Unit" },
+      { "quantity": 1, "item": "User Manual" },
+      { "quantity": 1, "item": "Audio Cable" }
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1503602642458-232111445657?w=500&h=500&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=400&h=300&fit=crop"
+    ]
+  }
+]
