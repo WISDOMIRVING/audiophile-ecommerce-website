@@ -69,10 +69,25 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
     async function fetchProducts() {
       try {
         const res = await fetch("/products.json");
-        if (!res.ok) throw new Error("Failed to fetch products");
-        const data = await res.json();
+        if (!res.ok) throw new Error("Failed to fetch products");interface RawProduct {
+  id: string | number;
+  name?: string;
+  slug?: string;
+  isNew?: boolean;
+  category?: string;
+  description?: string;
+  price?: string | number;
+  features?: string[];
+  in_the_box?: IncludedItem[];
+  mainImage?: string;
+  galleryImages?: string[];
+}
 
-        const normalized: Product[] = data.map((p: any) => ({
+// ... (keep existing code)
+
+        const data: RawProduct[] = await res.json();
+
+        const normalized: Product[] = data.map((p) => ({
           id: String(p.id),
           name: p.name || "",
           slug: p.slug || "",
@@ -87,8 +102,12 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
         }));
 
         setProducts(normalized);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred");
+        }
       } finally {
         setLoading(false);
       }
