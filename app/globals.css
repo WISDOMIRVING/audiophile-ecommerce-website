@@ -1,9 +1,13 @@
-/* styles/tailwind.css */
+/* styles/global.css */
 @import "tailwindcss";
+@import "tw-animate-css";
 
-/* 1) Theme tokens — Tailwind will generate utilities from these --color-* variables */
+/* ==============================
+   🎨 DESIGN TOKENS (Audiophile)
+   ============================== */
+
 @theme {
-  /* colors (Tailwind will create bg-*, text-*, border-*, fill-* utilities) */
+  /* --- Colors --- */
   --color-primary: #d87d4a;
   --color-primary-light: #fbaf85;
   --color-black: #101010;
@@ -12,8 +16,7 @@
   --color-light-gray: #fafafa;
   --color-white: #ffffff;
 
-  /* typography / sizes — Tailwind will not automatically create 'text-h1' unless you use them with arbitrary values,
-     but defining them here centralizes tokens and makes them available for theme() access if needed */
+  /* --- Typography Sizes --- */
   --h1-size: 56px;
   --h2-size: 40px;
   --h3-size: 32px;
@@ -22,6 +25,7 @@
   --h6-size: 18px;
   --body-size: 15px;
 
+  /* --- Line Heights --- */
   --line-space-h1: 58px;
   --line-space-h2: 44px;
   --line-space-h3: 36px;
@@ -30,45 +34,115 @@
   --line-space-h6: 24px;
   --line-space-body: 25px;
 
-  /* font */
+  /* --- Fonts --- */
   --font-sans: "Manrope", sans-serif;
+
+  /* --- Radius --- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
 }
 
-/* 2) Base :root fallback and runtime variables (useful for JS theme toggles) */
+/* ==============================
+   🌐 BASE STYLES
+   ============================== */
 @layer base {
   :root {
-    /* copy same tokens so var(--...) works at runtime */
     --color-primary: #d87d4a;
     --color-primary-light: #fbaf85;
-    --color-dark-gray: #101010;
+    --color-black: #101010;
+    --color-dark-gray: #000000;
     --color-gray: #f1f1f1;
     --color-light-gray: #fafafa;
     --color-white: #ffffff;
 
-    --h1-size: 56px;
-    --h2-size: 40px;
-    --h3-size: 32px;
-    --h4-size: 28px;
-    --h5-size: 24px;
-    --h6-size: 18px;
-    --body-size: 15px;
-
-    --line-space-h1: 58px;
-    --line-space-h2: 44px;
-    --line-space-h3: 36px;
-    --line-space-h4: 38px;
-    --line-space-h5: 33px;
-    --line-space-h6: 24px;
-    --line-space-body: 25px;
-
     --font-sans: "Manrope", sans-serif;
   }
 
-  /* optional global defaults using your variables */
   html,
   body {
     font-family: var(--font-sans);
     background-color: var(--color-white);
     color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    @apply border-gray-200 outline-none;
+  }
+}
+
+/* ==============================
+   🧱 GLOBAL UTILITIES
+   ============================== */
+
+@layer components {
+  /* Button primary */
+  .btn-primary {
+    @apply bg-[--color-primary] text-white px-6 py-3 font-bold uppercase tracking-widest hover:bg-[--color-primary-light] transition;
+  }
+
+  /* Button secondary (outline) */
+  .btn-secondary {
+    @apply border border-black text-black px-6 py-3 font-bold uppercase tracking-widest hover:bg-black hover:text-white transition;
+  }
+
+  /* Section padding */
+  .section {
+    @apply px-6 md:px-10 lg:px-20;
+  }
+
+  /* Headings */
+  .h1 {
+    font-size: var(--h1-size);
+    line-height: var(--line-space-h1);
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .h2 {
+    font-size: var(--h2-size);
+    line-height: var(--line-space-h2);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .h3 {
+    font-size: var(--h3-size);
+    line-height: var(--line-space-h3);
+    letter-spacing: 1.15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .h4 {
+    font-size: var(--h4-size);
+    line-height: var(--line-space-h4);
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .h5 {
+    font-size: var(--h5-size);
+    line-height: var(--line-space-h5);
+    letter-spacing: 1.7px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .h6 {
+    font-size: var(--h6-size);
+    line-height: var(--line-space-h6);
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Paragraph */
+  .body-text {
+    font-size: var(--body-size);
+    line-height: var(--line-space-body);
+    color: var(--color-black);
+    opacity: 0.8;
   }
 }

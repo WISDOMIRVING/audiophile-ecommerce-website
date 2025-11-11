@@ -7,7 +7,6 @@ import {
   useState,
 } from "react";
 
-// Full product interface matching your /products.json
 interface IncludedItem {
   quantity: number;
   item: string;
@@ -25,7 +24,7 @@ export interface Product {
   in_the_box: IncludedItem[];
   mainImage: string;
   galleryImages: string[];
-  quantity?: number; // used for cart
+  quantity?: number;
 }
 
 interface ProductsContextType {
@@ -38,7 +37,6 @@ interface ProductsContextType {
   clearCart: () => void;
 }
 
-// Create context
 const ProductsContext = createContext<ProductsContextType | undefined>(
   undefined
 );
@@ -49,16 +47,31 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch and normalize products
+  // ✅ Load cart from localStorage
+  useEffect(() => {
+    const stored = localStorage.getItem("audiophile_cart");
+    if (stored) {
+      try {
+        setCart(JSON.parse(stored));
+      } catch {
+        console.error("Invalid cart data in storage");
+      }
+    }
+  }, []);
+
+  // ✅ Persist cart to localStorage
+  useEffect(() => {
+    localStorage.setItem("audiophile_cart", JSON.stringify(cart));
+  }, [cart]);
+
+  // Fetch products
   useEffect(() => {
     async function fetchProducts() {
       try {
         const res = await fetch("/products.json");
         if (!res.ok) throw new Error("Failed to fetch products");
-
         const data = await res.json();
 
-        // Optional safety normalization (if future products have missing fields)
         const normalized: Product[] = data.map((p: any) => ({
           id: String(p.id),
           name: p.name || "",
@@ -84,21 +97,34 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
     fetchProducts();
   }, []);
 
-  // Cart actions
+  // ✅ Add product with correct quantity
   const addToCart = (product: Product) => {
     setCart((prev) => {
       const exists = prev.find((p) => p.id === product.id);
       if (exists) {
         return prev.map((p) =>
-          p.id === product.id ? { ...p, quantity: (p.quantity || 1) + 1 } : p
+          p.id === product.id
+            ? { ...p, quantity: (p.quantity || 1) + (product.quantity || 1) }
+            : p
         );
       }
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...product, quantity: product.quantity || 1 }];
     });
   };
 
+  // ✅ Reduce or remove
   const removeFromCart = (productId: string) => {
-    setCart((prev) => prev.filter((p) => p.id !== productId));
+    setCart((prev) => {
+      const existing = prev.find((p) => p.id === productId);
+      if (!existing) return prev;
+
+      if ((existing.quantity || 1) > 1) {
+        return prev.map((p) =>
+          p.id === productId ? { ...p, quantity: (p.quantity || 1) - 1 } : p
+        );
+      }
+      return prev.filter((p) => p.id !== productId);
+    });
   };
 
   const clearCart = () => setCart([]);
@@ -120,7 +146,6 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
   );
 }
 
-// Custom hooks
 export function useProducts() {
   const context = useContext(ProductsContext);
   if (!context)

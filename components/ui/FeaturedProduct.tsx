@@ -12,7 +12,7 @@ export default function FeaturedProduct() {
         {/* Speaker Image */}
         <div className="relative flex justify-center lg:justify-start w-full lg:w-1/2 py-12 lg:py-0">
           <Image
-            src="/speaker.png"
+            src="/speakers.png"
             alt="ZX9 Speaker"
             width={350}
             height={485}
